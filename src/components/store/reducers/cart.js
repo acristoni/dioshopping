@@ -15,6 +15,7 @@ export default function cart(state = INITIAL_STATE, action){
                     name: action.product.name_product,
                     price: action.product.price,
                     image: action.product.image,
+                    unidade: action.product.unidade,
                     quantity: 1
                 }
                 state.Cart.push(item);
@@ -32,6 +33,7 @@ export default function cart(state = INITIAL_STATE, action){
                         name: action.product.name_product,
                         price: action.product.price,
                         image: action.product.image,
+                        unidade: action.product.unidade,
                         quantity: 1
                     }
                     state.Cart.push(item);

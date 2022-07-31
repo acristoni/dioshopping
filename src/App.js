@@ -4,6 +4,7 @@ import store from './components/store';
 import Routes from './routes';
 import { Container } from '@material-ui/core/';
 import Header from './components/Header';
+import BackgroundHome from './images/BackgroundHome.jpg'
 
 const App = () => {
   
@@ -15,7 +16,7 @@ const App = () => {
   
   return(
     <Provider store={store}>
-      <Container maxWidth="xl">
+      <Container style={{backgroundImage: `url(${BackgroundHome})`, minHeight: "100vh"}} maxWidth="xl">
         <Router>
           <Header />
           <Routes />

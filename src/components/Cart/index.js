@@ -18,9 +18,9 @@ const Cart = () => {
 
     return(
         <>
-            <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#CartModal">
+            <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#CartModal">
                 <span><i className="fas fa-shopping-cart"></i></span>
-                <span className="badge rounded-pill bg-info text-dark">
+                <span className="badge rounded-pill bg-success text-white">
                     {cart.value}
                 </span>
             </button>
@@ -43,6 +43,7 @@ const Cart = () => {
                             <th scope="col"></th>
                             <th scope="col">Produto</th>
                             <th scope="col">Qtd</th>
+                            <th scope="col">Unid.</th>
                             <th scope="col">Preço</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
@@ -57,6 +58,9 @@ const Cart = () => {
                                         <th><img className="img-fluid img-thumbnail" src={item.image} alt={item.Name} width="50px"/></th>
                                         <th><span className="badge badge-pill bg-warning">
                                             {item.quantity}
+                                        </span></th>
+                                        <th><span className="badge badge-pill bg-success">
+                                            {item.unidade}
                                         </span></th>
                                         <th>R$ {item.price.toFixed(2)}</th>
                                         <th><button onClick={()=>dispatch(cartActions.AddItem(cart, item))} className="badge badge-pill bg-primary"><i className="fas fa-plus"></i></button></th>

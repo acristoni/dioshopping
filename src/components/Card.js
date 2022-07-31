@@ -20,12 +20,15 @@ const Card = ({ product, children }) => {
             <Paper className={classes.paper}>
                 <Grid container direction='column'>
                     <Grid item>
-                    <img width="140px" src={product.image} alt={product.name_product}/>
+                    <img width="140px" height="140px" src={product.image} alt={product.name_product}/>
                     <Typography variant='h6'>
                         {children}
                     </Typography>
                     <Typography variant='subtitle1'>
                         R$ {product.price.toFixed(2)}
+                    </Typography>
+                    <Typography variant='subtitle2'>
+                        {product.unidade}
                     </Typography>
                     </Grid>
                 
